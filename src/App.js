@@ -1,8 +1,6 @@
-
-import Comments from './Components/Comments/Comments'
-import Description from './Components/Video/Description';
 import VideoList from './Components/Video/VideoList'
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
+import Upload from './Components/Upload/Upload';
 
 function App(){
     return (
@@ -11,7 +9,7 @@ function App(){
         <Routes>
       <Route path="/" element ={<VideoList/>} />
       <Route path="/videos/:videoId" element ={<VideoList/>} />
-     
+      <Route path="/Upload" element ={<Upload/>} />
       </Routes>
       </div>
       </BrowserRouter>
