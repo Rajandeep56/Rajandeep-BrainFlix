@@ -23,7 +23,7 @@ function Header() {
           <img className="upload" src={UploadIcon} alt="upload" />
         </a>
         <div className="nav__avatar">
-        <img className="avatar" src={Avatar} alt="avatar" />
+        {/* <img className="avatar" src={Avatar} alt="avatar" /> */}
 
         </div>
       </div>
