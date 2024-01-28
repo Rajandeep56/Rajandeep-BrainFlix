@@ -1,0 +1,34 @@
+@import "../../Styles/partials/mixins";
+.Description{
+    &__title{
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    &__about{
+       border-bottom: 1px solid $mercury;
+       display: flex;
+       justify-content: space-between;
+       color: $silver;
+        &-left{
+            display: flex;
+            justify-content: space-around;
+            &--channel{
+                padding-right: 1rem;
+                font-weight: 700;
+                color: $black;
+            }
+        }
+        &-right{
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+            margin-right: 0.5rem;
+        }
+
+    }
+    &__main{
+        padding: 1rem 0;
+        line-height: 1.5rem;
+    }
+    
+}
