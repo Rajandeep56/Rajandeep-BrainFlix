@@ -1,5 +1,5 @@
 @import "./typography";
-
+@import "./variables";
 @mixin mobile {
     @media screen and (min-width: $mobile) {
         @content;
@@ -27,4 +27,8 @@
       &:hover{
         background-color: $brainflix-dark-blue;
       }
+}
+@mixin border{
+    background-color: $mercury;
+    height: 1px;
 }
