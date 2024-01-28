@@ -13,7 +13,6 @@
     }
     &__container{
         margin: 1rem 9rem;
-        background-color: rgb(232, 178, 107);
         display: flex;
         &-left{
 
@@ -21,23 +20,48 @@
                 
             }
             &--form{
-                background-color: rgb(180, 204, 196);
+                display: flex;
+                align-items: center;
+                padding: 1rem 0.5rem;
+                &--avatar{
+                    @include avatar
+                }
                 &---label{
-                    background-color: rgb(229, 113, 113);
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: 700;
+                    margin: 0.5rem 1rem;
+                    color: $silver;
+                    width: 22rem;
                 }
                 &---text{
-                    background-color: rgb(188, 204, 122);
+                    box-sizing: border-box;
+                    width: 100%;
+                    background-color: $alabaster;
+                    border: 2px solid $mercury;
+                    border-radius: 0.3rem;
+                    height: 3rem;
+                    padding-left: 2rem;
+                    color:$black;
+                    font-size: 1rem;
+                    line-height: 2.5rem;
+                    margin: 0.625rem 0;
+                
                 }
                 &---button{
-                    background-color: blue;
+                    @include button;
+                    height: 3.5rem;
+                    width: 10rem;
+                    border-radius: 0.5rem;
+                    font-size: 1rem;
+                    margin-top: 1rem;
                 }
             }
             &--comments{
-                background-color: rgb(107, 234, 143);
             }
         }
         &-right{
-            border-left: 1px solid $mercury;
+            border-left: 2px solid $mercury;
             padding: 0;
             &--heading{
                 font-size: 1.3rem;
