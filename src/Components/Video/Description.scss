@@ -5,10 +5,11 @@
         font-size: 2rem;
     }
     &__about{
-       border-bottom: 1px solid $mercury;
+       border-bottom: 2px solid $mercury;
        display: flex;
        justify-content: space-between;
        color: $silver;
+       margin: 0.5rem 0;
         &-left{
             display: flex;
             justify-content: space-around;
@@ -27,8 +28,9 @@
 
     }
     &__main{
-        padding: 1rem 0;
+        padding: 1rem 1rem 1rem 0rem;
         line-height: 1.5rem;
+        
     }
     
 }

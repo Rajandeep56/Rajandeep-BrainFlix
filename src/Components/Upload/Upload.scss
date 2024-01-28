@@ -1,0 +1,69 @@
+@import "../../Styles/partials/mixins";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/typography";
+
+.Upload{
+    border-bottom: 2px solid $mercury;
+    
+   &__container{
+    display: flex;
+    border-top: 2px solid$mercury;
+        &-left{
+            width: 20rem;
+            margin: 2rem;
+            &--imagetop{
+                font-size: 0.5rem;
+                font-weight: 600;
+                color: $silver;
+            }
+            &--image{
+                border-radius: 0.5rem;
+            }
+        }
+        &-right{
+            &--form{
+                height: 15rem;
+                &---label{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 2rem;
+                    &----label{
+                        color: $silver;
+                        font-weight: 600;
+                    }
+                    &---text{
+                        background-color: $alabaster;
+                        border: 1px solid $mercury;
+                        border-radius: 0.3rem;
+                    }
+
+                }
+                &---button{
+                    height:2rem;
+                    display: flex;
+                    align-items: flex-end;
+                    margin-left: 33rem
+                }
+                
+                &---button button{ 
+                    margin:0.5rem;
+                    @include button;
+                    color: $brainflix-blue;
+                    background-color: $white;
+                }
+                
+            }
+            
+        }
+        &-top {
+            display: flex;
+            flex-direction: column;
+           width: 40rem;
+           
+        }
+   } 
+}
+.Heading{
+    padding: 0 10rem;
+}
+

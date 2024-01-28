@@ -17,6 +17,14 @@
         @content;
     }
 }
+@mixin avatar{
+    background-color: black;
+    width: 3rem;
+    height: 2.95rem;
+    border-radius: 3rem;
+    object-fit: cover;
+  }
+  
 @mixin button{
     background-color: $brainflix-blue;
       border: none;

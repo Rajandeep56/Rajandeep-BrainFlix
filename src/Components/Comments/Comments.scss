@@ -1,0 +1,31 @@
+@import "../../Styles/partials/mixins";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/typography";
+.comments{
+    border-top: 2px solid $mercury;
+    display: flex;
+    padding: 1rem 0.5rem;
+    &__avatar{
+        @include avatar
+    }
+    &__header{
+        display: flex;
+        flex-direction: column;
+        &-header{
+            display: flex;
+            &--name{
+                padding:0.5rem 1rem;
+                width: 21rem;
+                color: $black;
+                text-decoration: none;                
+            }
+            &--timestamp{
+                padding:0.5rem 1rem;
+                color: $silver;
+            }
+        }
+        &-comment{
+            padding-left: 1rem;
+        }
+    }
+}

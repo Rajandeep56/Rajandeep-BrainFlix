@@ -4,8 +4,10 @@ import axios from 'axios';
 import Video from './Video';
 import Comments from '../Comments/Comments';
 import Description from './Description';
-import Header from '../Header/Header'
-import "./VideoList.scss"
+import Header from '../Header/Header';
+import "./VideoList.scss";
+import Avatar from '../../Assets/Images/Mohan-muruge.jpg';
+
 
 
 function VideoList() {
@@ -58,17 +60,17 @@ function VideoList() {
                 likes={descriptionList.likes}
                 timestamp={descriptionList.timestamp}
                 description={descriptionList.description}/>
+                <h4>{commentsList.length} Comments</h4>
           </div>
           <form className="body__container-left--form">
-                <label htmlFor="comment" className="body__container-left--form---label">Join the conversation:
+                <img className="body__container-left--form--avatar" src={Avatar}  alt="avatar" />
+                <label htmlFor="comment" className="body__container-left--form---label">JOIN THE CONVERSATION:
                 <textarea typeof="text" className="body__container-left--form---text" id="comment" name="comment" placeholder="Add a new Comment"/></label>
-                <button className="body__container-left--form---button button" href="#">
-                <img  alt=""/>Comment</button>
+                <button className="body__container-left--form---button button" href="#">COMMENT</button>
           </form>
           <div className="body__container-left--comments">
-            <h3>{commentsList.length} Comments</h3>
             {Array.isArray(commentsList) && commentsList.map((comments) => (
-                <Comments key={comments.id} id={comments.id} name={comments.name} comment={comments.comment} />
+                <Comments key={comments.id} id={comments.id} name={comments.name} timestamp={comments.timestamp} comment={comments.comment} />
               ))}
           </div>
         </div>
