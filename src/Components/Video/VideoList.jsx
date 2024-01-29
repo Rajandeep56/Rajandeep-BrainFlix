@@ -41,7 +41,7 @@ function VideoList() {
   }, [videoId]);
   
   const currentImage = videoId ? videoList.find((video) => video.id === videoId): videoList[0];
-
+  const filteredVideoList = videoId ? videoList.filter((video) => video.id !== videoId) : videoList;
   return (
     <>
     <Header/>
@@ -77,7 +77,7 @@ function VideoList() {
       <div className='body__container-right'>
         <div className='body__container-right--heading'>Next Videos</div>
         <ul className='body__container-right--list'>
-          {videoList.map((video) => (
+          {filteredVideoList.map((video) => (
             <Video key={video.id} id={video.id} title={video.title} by={video.channel} source={video.image} />
           ))}
         </ul>
