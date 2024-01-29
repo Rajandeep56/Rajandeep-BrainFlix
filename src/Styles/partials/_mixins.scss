@@ -32,11 +32,9 @@
       height: 100%;
       font-family: "Avenir";
       font-weight: 700;
+      border-radius: 0.5rem;
       &:hover{
         background-color: $brainflix-dark-blue;
       }
 }
-@mixin border{
-    background-color: $mercury;
-    height: 1px;
-}
+

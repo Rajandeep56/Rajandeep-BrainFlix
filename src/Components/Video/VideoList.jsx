@@ -24,7 +24,7 @@ function VideoList() {
           'https://project-2-api.herokuapp.com/videos?api_key=f64d4825-7f87-446e-bfca-413d23aad07e'
         );
         setVideoList(videoResponse.data);
-
+          
         const commentsResponse = await axios.get(
           `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=f64d4825-7f87-446e-bfca-413d23aad07e`
         );
@@ -39,8 +39,8 @@ function VideoList() {
 
     getData();
   }, [videoId]);
-
-  const currentImage = videoList.find((video) => video.id === videoId);
+  
+  const currentImage = videoId ? videoList.find((video) => video.id === videoId): videoList[0];
 
   return (
     <>

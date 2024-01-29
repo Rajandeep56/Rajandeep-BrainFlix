@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <header className='nav'>
-      <Link to="/"className="nav__logo"><img src={BrainflixLogo} alt="Brainflix Logo" /></Link>
+      <Link to="/videos/84e96018-4022-434e-80bf-000ce4cd12b8"className="nav__logo"><img src={BrainflixLogo} alt="Brainflix Logo" /></Link>
       <div className="nav__container">
         <div className='nav__container-search'>
           <input type="search" className="nav__container-search-input" placeholder='Search'>
