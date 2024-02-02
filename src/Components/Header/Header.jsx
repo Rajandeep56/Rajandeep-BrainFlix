@@ -2,6 +2,7 @@ import React from 'react';
 import BrainflixLogo from '../../Assets/Logo/BrainFlix-logo.svg'
 import "./Header.scss";
 import Avatar from '../../Assets/Images/Mohan-muruge.jpg'
+import arrow from '../../Assets/Icons/upload.svg'
 import { Link } from 'react-router-dom';
 
 function Header() {
@@ -13,7 +14,7 @@ function Header() {
           <input type="search" className="nav__container-search-input" placeholder='Search'>
           </input>
         </div>
-          <Link to="/upload" className="nav__container-upload"><button className="nav__container-upload button"> UPLOAD</button></Link>
+          <Link to="/upload" className="nav__container-upload"><button className="nav__container-upload button"> <img src={arrow} width="20px"/> UPLOAD</button></Link>
         <div className="nav__container-avatar">
           <img className="nav__container-avatar" src={Avatar}  alt="avatar" />
         </div>

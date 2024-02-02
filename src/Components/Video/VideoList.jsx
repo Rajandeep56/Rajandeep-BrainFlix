@@ -7,6 +7,7 @@ import Description from './Description';
 import Header from '../Header/Header';
 import "./VideoList.scss";
 import Avatar from '../../Assets/Images/Mohan-muruge.jpg';
+import commentimg from '../../Assets/Icons/add_comment.svg';
 
 
 
@@ -66,7 +67,7 @@ function VideoList() {
                 <img className="body__container-left--form--avatar" src={Avatar}  alt="avatar" />
                 <label htmlFor="comment" className="body__container-left--form---label">JOIN THE CONVERSATION:
                 <textarea typeof="text" className="body__container-left--form---text" id="comment" name="comment" placeholder="Add a new Comment"/></label>
-                <button className="body__container-left--form---button button" href="#">COMMENT</button>
+                <button className="body__container-left--form---button button" href="#"><img src={commentimg} width="20px"/>COMMENT</button>
           </form>
           <div className="body__container-left--comments">
             {Array.isArray(commentsList) && commentsList.map((comments) => (
