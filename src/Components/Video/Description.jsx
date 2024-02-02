@@ -1,6 +1,6 @@
 import "./Description.scss";
-import views from '../../Assets/Icons/views.svg';
-import likes from '../../Assets/Icons/likes.svg';
+import viewsimg from '../../Assets/Icons/views.svg';
+import likesimg from '../../Assets/Icons/likes.svg';
 function Description({ id, title, channel, views, likes, timestamp, description }) {
   console.log(title, channel, views, likes, timestamp, description);
 
@@ -13,9 +13,9 @@ function Description({ id, title, channel, views, likes, timestamp, description 
           <p>{timestamp}</p>
         </div>
         <div className="Description__about-right">
-        <img src="../../Assets/Icons/likes.svg"  />
+        <img src={viewsimg} width="20px"  />
           <p>{views}</p>
-          <img src="../../Assets/Icons/likes.svg"  />
+          <img src={likesimg} width="20px"/>
           <p>{likes}</p>
         </div>
       </div>
