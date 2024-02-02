@@ -7,10 +7,10 @@ function App(){
       <BrowserRouter>
       <div>
         <Routes>
-      <Route path="/" element ={<VideoList/>} />
-      <Route path="/videos/:videoId" element ={<VideoList/>} />
-      <Route path="/Upload" element ={<Upload/>} />
-      </Routes>
+          <Route path="/" element ={<VideoList/>} />
+          <Route path="/videos/:videoId" element ={<VideoList/>} />
+          <Route path="/Upload" element ={<Upload/>} />
+        </Routes>
       </div>
       </BrowserRouter>
     );
