@@ -22,12 +22,12 @@ function VideoList() {
     const getData = async () => {
       try {
         const videoResponse = await axios.get(
-          'https://project-2-api.herokuapp.com/videos?api_key=f64d4825-7f87-446e-bfca-413d23aad07e'
+          'http://localhost:8000/videos/'
         );
         setVideoList(videoResponse.data);
           
         const commentsResponse = await axios.get(
-          `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=f64d4825-7f87-446e-bfca-413d23aad07e`
+          `http://localhost:8000/videos/${videoId}`
         );
         setdescriptionList(commentsResponse.data);
         setCommentsList(commentsResponse.data.comments);
