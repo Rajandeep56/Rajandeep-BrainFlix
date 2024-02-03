@@ -56,10 +56,8 @@ router.post("/", (req, res) => {
         return res.status(400).json("Bad request. No data provided.");
     }
 
-    // Assuming addVideo returns the updated video list
     const updatedVideoList = addVideo(newVideo);
 
-    // Depending on your needs, you might want to return just the newly added video
     res.status(201).json(newVideo);
 });
 
