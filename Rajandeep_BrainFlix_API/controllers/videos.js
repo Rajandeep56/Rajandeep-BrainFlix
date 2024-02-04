@@ -1,5 +1,4 @@
 const fs = require("fs");
-
 const fetchVideos = () => {
     return JSON.parse(fs.readFileSync("./data/Videos.json"));
 }
