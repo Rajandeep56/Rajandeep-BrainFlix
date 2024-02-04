@@ -1,10 +1,11 @@
 const express = require("express");
 const router = express.Router();
+const path = require('path');
 
 const { fetchVideos, addVideo } = require("../controllers/videos");
+router.use('/public', express.static(path.join(__dirname, '..', 'public')));
 
 router.use(express.json()); 
-
 router.route("/").get((req, res) => {
     const videoList = fetchVideos();
     const noIds = videoList.map(video => ({
