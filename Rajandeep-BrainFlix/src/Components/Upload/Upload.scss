@@ -8,6 +8,12 @@
    &__container{
    
     display: flex;
+    @include mobile{
+        flex-direction: column;
+    }
+    @include tablet {
+        flex-direction: column;
+    }
     border-top: 2px solid$mercury;
         &-left{
             width: 20rem;
@@ -19,6 +25,13 @@
             }
             &--image{
                 border-radius: 0.5rem;
+                height: 50%;
+                width: 100%;
+                @include mobile{
+                    height: 100%;
+                    object-fit: cover;
+                    width: 100vw;
+                }
             }
         }
         &-right{
@@ -44,7 +57,13 @@
                     height:2rem;
                     display: flex;
                     align-items: flex-end;
-                    margin-left: 33rem
+                    margin-left: 33rem;
+                    @include mobile{
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 0;
+                        margin-left: 0;
+                    }
                 }
                 
                 &---button button{ 
@@ -62,11 +81,22 @@
             flex-direction: column;
            width: 40rem;
            margin: 0.5rem;
+           @include mobile{
+            width: auto;
+           }
            
         }
    } 
 }
 .Heading{
     padding: 0 10rem;
+    @include tablet{
+        padding:  0;
+        align-items: center;
+    }
+    @include mobile{
+        padding:  0;
+        align-items: center;
+    }
 }
 

@@ -9,6 +9,20 @@
   margin: 1rem 10rem;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @include tablet{
+    display: flex;
+    margin: 1rem;
+  }
+  
+
+  @include mobile{
+    display: flex;
+    margin: 0.5rem 2rem;
+    flex-direction: column;
+    align-items: center;
+
+  }
   
   &__logo{
     margin-top: 0.5rem;
@@ -17,7 +31,15 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    &-search-input{
+    @include mobile{
+      display: flex;
+      flex-direction: column;
+    }
+    
+    &-search{
+      display: flex;
+    
+      &-input{
       padding-right: 2rem;
         background-color: $alabaster;
         border: 1px solid $mercury;
@@ -27,6 +49,7 @@
         padding-left: 2rem;
         background: url(../../Assets/Icons/search.svg) no-repeat scroll 0.5rem 0.9rem;
       }
+    }
       
     
     &-upload{
@@ -36,7 +59,17 @@
       
     }
     &-avatar{
-      @include avatar
+      @include avatar;
+      @include mobile{
+        display: none;
+      }
+      &--m{
+        @include avatar;
+        display: none;
+        @include mobile{
+          display: flex;
+        }
+      }
     }
   }
 

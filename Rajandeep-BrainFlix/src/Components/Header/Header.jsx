@@ -13,6 +13,7 @@ function Header() {
         <div className='nav__container-search'>
           <input type="search" className="nav__container-search-input" placeholder='Search'>
           </input>
+          <img className="nav__container-avatar--m" src={Avatar}  alt="avatar" />
         </div>
           <Link to="/upload" className="nav__container-upload"><button className="nav__container-upload button"> <img src={arrow} width="20px"/> UPLOAD</button></Link>
         <div className="nav__container-avatar">
