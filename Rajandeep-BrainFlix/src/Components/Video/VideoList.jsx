@@ -10,12 +10,10 @@ import Avatar from '../../Assets/Images/Mohan-muruge.jpg';
 import commentimg from '../../Assets/Icons/add_comment.svg';
 
 
-
 function VideoList() {
   const [videoList, setVideoList] = useState([]);
   const [commentsList, setCommentsList] = useState([]);
   const [descriptionList, setdescriptionList] = useState({});
-
   const { videoId } = useParams();
 
   useEffect(() => {
@@ -32,12 +30,10 @@ function VideoList() {
         setdescriptionList(commentsResponse.data);
         setCommentsList(commentsResponse.data.comments);
 
-
       } catch (error) {
         console.log('Failed to get data:', error);
       }
     };
-
     getData();
   }, [videoId]);
   
@@ -69,6 +65,7 @@ function VideoList() {
                 <textarea typeof="text" className="body__container-left--form---text" id="comment" name="comment" placeholder="Add a new Comment"/></label>
                 <button className="body__container-left--form---button button" href="#"><img src={commentimg} width="20px"/>COMMENT</button>
           </form>
+          <button className="body__container-left--form---buttonm button" href="#"><img src={commentimg} width="20px"/>COMMENT</button>
           <div className="body__container-left--comments">
             {Array.isArray(commentsList) && commentsList.map((comments) => (
                 <Comments key={comments.id} id={comments.id} name={comments.name} timestamp={comments.timestamp} comment={comments.comment} />

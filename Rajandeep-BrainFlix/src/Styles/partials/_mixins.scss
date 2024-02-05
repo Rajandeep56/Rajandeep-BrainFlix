@@ -1,13 +1,14 @@
 @import "./typography";
 @import "./variables";
+
 @mixin mobile {
-    @media screen and (min-width: $mobile) {
+    @media screen and (max-width: $mobilemax) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet) and (max-width: $desktop ) {
         @content;
     }
 }
@@ -17,6 +18,7 @@
         @content;
     }
 }
+
 @mixin avatar{
     background-color: black;
     width: 3rem;
